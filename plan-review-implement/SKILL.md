@@ -1,6 +1,6 @@
 ---
 name: plan-review-implement
-description: Full-cycle engineering workflow: plan → review → implement → verify. Use when the user asks to implement a significant feature, refactor, or change. Activates a structured process of exploration, planning, independent review, surgical implementation, and verification.
+description: "Full-cycle engineering workflow: plan → review → implement → verify. Use when the user asks to implement a significant feature, refactor, or change. Activates a structured process of exploration, planning, independent review, surgical implementation, and verification."
 ---
 
 Follow this structured workflow for any non-trivial implementation task. The process ensures shared understanding, prevents regressions, and delivers verified code.
