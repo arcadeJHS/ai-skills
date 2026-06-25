@@ -19,7 +19,7 @@ Before launching reviewers, collect the essential context:
 1. **If a plan document exists** (e.g., `/memories/session/plan.md`), read it. The plan is the benchmark for correctness.
 2. **If no plan exists**, ask the user for 2–3 sentences describing what the code is supposed to do. This becomes the de facto requirements spec.
 3. **Identify the codebase conventions**: file_search for existing patterns (test file naming, component structure, error handling style, etc.) that reviewers should check against.
-4. **Determine scope**: what files/folders should be reviewed? If the user doesn't specify, review the git diff or changed files.
+4. **Determine scope**: what files/folders should be reviewed? If the user doesn't specify, use the `get_changed_files` tool to identify changed files, or fall back to running `git diff --name-only` in the terminal.
 
 ## Step 2 — Spin Up Review Subagents
 

@@ -40,6 +40,8 @@ Follow this structured workflow for any non-trivial implementation task. The pro
 
    Each subagent must report: (A) verdict (sound / sound-with-caveats / has-blocking-issues), (B) blocking issues with file:line evidence, (C) non-blocking caveats/risks, (D) confirmations verified, and (E) concrete suggestions. They are SKEPTICAL reviewers — their job is to find problems before implementation.
 
+   Note: this phase uses raw subagents with inline instructions rather than the `skeptical-review` skill — that skill is for reviewing finished code, not plans.
+
 8. **Fix/update the plan** based on subagent(s) feedback. Re-run any subagent review if the plan changes significantly.
 
 ## Phase 4 — Present & Get Approval
@@ -59,10 +61,9 @@ Follow this structured workflow for any non-trivial implementation task. The pro
 ## Phase 6 — Verify & Self-Review
 
 14. **Run all verification steps** before declaring completion:
-    - Backend: `cd backend && mvn test` — full suite must be green
-    - Frontend: `cd frontend && npm test` — all tests must pass
-    - Frontend build: `cd frontend && npm run build` — must succeed (typecheck + lint + build)
-    - All verification steps from the plan must pass
+    - Run the full test suite using the project's build system (e.g., `mvn test`, `npm test`, `pytest`, `go test ./...` — match whatever the project uses)
+    - Run the build/compile step to confirm no type errors or lint failures
+    - All verification steps listed in the plan must pass
 
 15. **Review the implementation.** Use the `skeptical-review` skill to spin up skeptical subagents that review the finished CODE against requirements, codebase conventions, and the plan. At least one subagent; multiple for complex tasks (frontend reviewer + backend reviewer).
 
