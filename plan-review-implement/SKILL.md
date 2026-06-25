@@ -64,7 +64,7 @@ Follow this structured workflow for any non-trivial implementation task. The pro
     - Frontend build: `cd frontend && npm run build` — must succeed (typecheck + lint + build)
     - All verification steps from the plan must pass
 
-15. **Spin up at least one independent subagent** for implementation review. Same as Phase 3 but reviewing the finished CODE against requirements, codebase conventions, and the plan. At least one subagent; multiple for complex tasks (frontend reviewer + backend reviewer).
+15. **Review the implementation.** Use the `skeptical-review` skill to spin up skeptical subagents that review the finished CODE against requirements, codebase conventions, and the plan. At least one subagent; multiple for complex tasks (frontend reviewer + backend reviewer).
 
 16. **Fix any issues** the subagent(s) find. Re-run tests/build after fixes.
 
