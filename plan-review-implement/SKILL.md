@@ -50,7 +50,7 @@ Follow this structured workflow for any non-trivial implementation task. The pro
 
 ## Phase 5 — Implement
 
-11. **Implement following the plan.** Use the `surgical-developer` skill for guidance: think before coding, prefer simplicity, make surgical (minimal) changes, surface assumptions, and define verifiable success criteria.
+11. **Implement following the plan.** Use the `surgical-developer` skill for guidance: think before coding, prefer simplicity, make surgical (minimal) changes, surface assumptions, and define verifiable success criteria. Important: re-use existing code patterns and conventions. Avoid speculative abstractions or unrequested features. For example, if an existing frontend component or pattern already does what you are implementing—or just needs a minor refactor—use that instead of writing it from scratch.
 
 12. **Keep changes additive where possible.** If shared code must change, apply the test-first regression guard from Phase 2.
 
