@@ -31,9 +31,9 @@ Follow this structured workflow for any non-trivial implementation task. The pro
 
 6. **If doubts arise while writing the plan, stop and ask the user.** Do not make large assumptions.
 
-## Phase 3 — Independent Plan Review
+## Phase 3 — Skeptical Independent Plan Review
 
-7. **Spin up at least one independent subagent** to review the plan against requirements and existing code. The subagent(s) should be given the full plan and told to verify assumptions against real code. For complex tasks, spawn multiple subagents in parallel:
+7. **Spin up at least one independent subagent** to skeptically review the plan against requirements and existing code. The subagent(s) should be given the full plan and told to verify assumptions against real code. For complex tasks, spawn multiple subagents in parallel:
    - One for frontend plan review
    - One for backend plan review
    - Optionally, a third for strategy/architecture review when the logic is new, abstract, or complex
